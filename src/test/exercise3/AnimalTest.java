@@ -12,15 +12,14 @@ public class AnimalTest {
         for (Animal animal : animals) {
             sumAge += animal.getAge();
         }
-        float average = sumAge / animals.size();
-        return average;
+        return sumAge / animals.size();
     }
 
     public static void main(String[] args) {
         List<Animal> dogs = new ArrayList<>();
         dogs.add(new Dog("Lulu", 1, SEX.MALE));
         dogs.add(new Dog("Kiki", 1, SEX.FEMALE));
-        dogs.add(new Dog("Luki", 3, SEX.MALE));
+        dogs.add(new Dog("Loki", 3, SEX.MALE));
         // Average age of dogs
         System.out.println("- Average age of dogs: " + averageAge(dogs));
 
