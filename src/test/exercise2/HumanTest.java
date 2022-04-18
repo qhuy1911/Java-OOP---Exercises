@@ -1,6 +1,7 @@
 package test.exercise2;
 
 import main.exercise2.Human;
+import main.exercise2.NameComparator;
 import main.exercise2.Student;
 import main.exercise2.Worker;
 
@@ -89,16 +90,7 @@ public class HumanTest {
         list.addAll(workerList);
 
         // sort merged list
-        Collections.sort(list, new Comparator<Human>() {
-            @Override
-            public int compare(Human o1, Human o2) {
-                if (o1.getFirstName().compareTo(o2.getFirstName()) != 0) {
-                    return o1.getFirstName().compareTo(o2.getFirstName());
-                } else {
-                    return o1.getLastName().compareTo(o2.getLastName());
-                }
-            }
-        });
+        Collections.sort(list, new NameComparator());
 
         // Print merged list
         System.out.println("- Merge list: ");
