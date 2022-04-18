@@ -1,4 +1,4 @@
-package defining_classes;
+package main.exercise1;
 
 public class Battery {
     private String model;

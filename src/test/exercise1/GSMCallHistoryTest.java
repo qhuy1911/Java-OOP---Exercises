@@ -1,4 +1,7 @@
-package defining_classes;
+package test.exercise1;
+
+import main.exercise1.Call;
+import main.exercise1.GSM;
 
 import java.util.Date;
 

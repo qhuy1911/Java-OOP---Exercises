@@ -1,4 +1,6 @@
-package defining_classes;
+package test.exercise1;
+
+import main.exercise1.GSM;
 
 public class GSMTest {
     public static void main(String[] args) {
