@@ -5,8 +5,19 @@ import main.exercise3.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * AnimalTest class
+ *
+ * @author intern.npqhuy
+ */
 public class AnimalTest {
 
+    /**
+     * Calculate the average age of list animal
+     *
+     * @param animals: list of animals
+     * @return the average age of list animal
+     */
     public static float averageAge(List<Animal> animals) {
         float sumAge = 0;
         for (Animal animal : animals) {
@@ -31,16 +42,16 @@ public class AnimalTest {
         System.out.println("- Average age of frogs: " + averageAge(frogs));
 
         List<Animal> kittens = new ArrayList<>();
-        kittens.add(new Kitten("Nami", 3, null));
-        kittens.add(new Kitten("Main", 1, null));
-        kittens.add(new Kitten("Naim", 5, null));
+        kittens.add(new Kitten("Nami", 3));
+        kittens.add(new Kitten("Main", 1));
+        kittens.add(new Kitten("Naim", 5));
         // Average age of kittens
         System.out.println("- Average age of kittens: " + averageAge(kittens));
 
         List<Animal> tomcats = new ArrayList<>();
-        tomcats.add(new Tomcat("Tom", 5, null));
-        tomcats.add(new Tomcat("Jerry", 2, null));
-        tomcats.add(new Tomcat("Tommy", 5, null));
+        tomcats.add(new Tomcat("Tom", 5));
+        tomcats.add(new Tomcat("Jerry", 2));
+        tomcats.add(new Tomcat("Tommy", 5));
         // Average age of tomcats
         System.out.println("- Average age of tomcats: " + averageAge(tomcats));
     }
