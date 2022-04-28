@@ -1,17 +1,23 @@
 package test.exercise2;
 
+import main.exercise2.HRUtils;
 import main.exercise2.Human;
-import main.exercise2.NameComparator;
 import main.exercise2.Student;
 import main.exercise2.Worker;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
+/**
+ * HumanTest class
+ *
+ * @author intern.npqhuy
+ */
 public class HumanTest {
     public static void main(String[] args) {
+        HRUtils hrUtils = new HRUtils();
+
         //----------------STUDENT----------------
         // Create 10 students
         Student st1 = new Student("Kristal", "Vasile", 9);
@@ -39,7 +45,7 @@ public class HumanTest {
         studentList.add(st10);
 
         // Sort list of students by grade in ascending order
-        Collections.sort(studentList);
+        hrUtils.sortByGrade(studentList);
 
         // Print list of student
         System.out.println("- List of students: ");
@@ -74,8 +80,8 @@ public class HumanTest {
         workerList.add(wk9);
         workerList.add(wk10);
 
-        // Sort list of students by grade in ascending order
-        Collections.sort(workerList);
+        // Sort list of students by moneyPerHour in ascending order
+        hrUtils.sortByMoneyPerHour(workerList);
 
         // Print list of student
         System.out.println("- List of workers: ");
@@ -90,7 +96,7 @@ public class HumanTest {
         list.addAll(workerList);
 
         // sort merged list
-        Collections.sort(list, new NameComparator());
+        hrUtils.sortByName(list);
 
         // Print merged list
         System.out.println("- Merge list: ");
